@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-crimson: "Crimson Text", serif;
+  --font-dm-sans: "DM Sans", sans-serif;
+  --font-roboto-mono: "Roboto Mono", monospace;
+
+  --color-green-1: #485C11;
+  --color-green-2: #8E9C78;
+  --color-green-3: #DFECC6;
+  --color-grey-1: #929292;
+  --color-grey-2: #E9E9E9;
+}
+
+@layer base {
+  *, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
