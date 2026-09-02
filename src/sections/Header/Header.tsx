@@ -1,5 +1,5 @@
 import ipad from '../../assets/Ipad.png'
-
+import iphone from '../../assets/Iphone.png'
 import './Header.css'
 
 export default function Header() {
