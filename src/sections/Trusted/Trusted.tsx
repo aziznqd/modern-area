@@ -9,7 +9,7 @@ import logo_6 from '../../assets/logo-placeholder-6.svg'
 export default function Trusted(){
     return(
         <section className='trusted-section'>
-            <p className='font-dm-sans font-normal text-grey-1'>Trusted by:</p>
+            <p className='font-dm-sans font-normal text-grey-1 text-[12px]'>Trusted by:</p>
             <div className='partners-box'>
                 <img src={logo_1} alt="logo-1" />
                 <img src={logo_2} alt="logo-2" />
