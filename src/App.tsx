@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/Navbar";
 import Benefits from "./sections/Benefits/Benefits";
 import Header from "./sections/Header/Header";
@@ -12,6 +13,7 @@ export default function App(){
         <Trusted/>
         <Benefits/>
       </main>
+      <Analytics/>
     </div>
   )
 }
