@@ -4,8 +4,18 @@ import icon_cable from '../../assets/icon-cable.svg'
 import icon_planet from '../../assets/icon-planet.svg'
 import icon_speech from '../../assets/icon-speech.svg'
 import icon_graph from '../../assets/icon-graph.svg'
+import { useState } from "react"
+import { useInView } from "react-intersection-observer"
 
 export default function Benefits(){
+    
+    const { ref, inView } = useInView({ threshold: 1, triggerOnce: true })
+    const [imageLoaded, setImageLoaded] = useState(false);
+    
+    function onImageLoad(){
+        setImageLoaded(true)
+    }
+
     return(
         <section className="benefits-section">
             <div className="benefits-header">
@@ -13,7 +23,7 @@ export default function Benefits(){
                 <h2 className="font-normal font-crimson text-[clamp(50px,100vw,60px)]">We’ve cracked the code.</h2>
                 <p className="text-grey-1 font-normal font-dm-sans text-[15px]">Area provides real insights, without the data overload.</p>
             </div>
-            <div className="benefits-content">
+            <div className="benefits-content" ref={ref}>
                 <div className="benefits-card">
                     <img src={icon_cable} alt="cable" />
                     <p className="font-normal font-crimson text-[18px] mt-6">Amplify Insights</p>
@@ -35,7 +45,7 @@ export default function Benefits(){
                     <p className="font-normal font-dm-sans text-[15px] text-grey-1 mt-5">Generate precise, visually compelling reports that illustrate your growth trajectories across all regions.</p>
                 </div>
             </div>
-            <img src={benefits_img} alt="landscape" className="benefits-main-img"/>
+            <img src={benefits_img} alt="landscape" className={`benefits-main-img ${imageLoaded ? "is-ready" : ""} ${inView ? "is-visible" : ""}`} onLoad={onImageLoad}/>
         </section>
     )
 }

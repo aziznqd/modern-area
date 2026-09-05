@@ -16,6 +16,11 @@
     align-items: center;
     justify-content: center;
     padding: 0 40px 0 40px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.is-ready.is-visible{
+    animation: textSlideUp 1s ease-in-out forwards;
 }
 
 .partners-box img{

@@ -12,6 +12,7 @@
   --color-green-3: #DFECC6;
   --color-grey-1: #929292;
   --color-grey-2: #E9E9E9;
+
 }
 
 @layer base {
@@ -19,5 +20,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+}
+
+
+@keyframes imgSlideUp {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes textSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
